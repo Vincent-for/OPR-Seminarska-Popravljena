@@ -8,6 +8,9 @@ namespace OPR_Seminarska_Popravljena
 {
     internal class Enote
     {
+        private readonly string _defaultDolzina = "km";
+        private readonly string _defaultCena = "€";
+        private readonly string _defaultMoc = "kW";
 
         private string _enotaDolzine;
         private string _enotaMoci;
@@ -24,7 +27,7 @@ namespace OPR_Seminarska_Popravljena
                 }
                 else
                 {
-                    _enotaDolzine = "km";
+                    _enotaDolzine = _defaultDolzina;
                 }
             }
         }
@@ -39,7 +42,7 @@ namespace OPR_Seminarska_Popravljena
                 }
                 else
                 {
-                    _enotaMoci = "kW";
+                    _enotaMoci = _defaultMoc;
                 }
             }
         }
@@ -54,7 +57,7 @@ namespace OPR_Seminarska_Popravljena
                 }
                 else
                 {
-                    _enotaCene = "€";
+                    _enotaCene = _defaultCena;
                 }
             }
         }

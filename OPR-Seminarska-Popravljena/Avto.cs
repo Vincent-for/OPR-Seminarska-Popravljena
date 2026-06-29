@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace OPR_Seminarska_Popravljena
 {
-    internal class Avto
+    class Vozilo
     {
         public string znamka { get; set; }
         public int starost { get; set; }
         public int cena { get; set; }
+    }
+    internal class Avto: Vozilo
+    {
 
         public Avto()
         {

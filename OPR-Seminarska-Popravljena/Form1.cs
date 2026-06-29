@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OPR_Seminarska_Popravljena;
 
 namespace OPR_Seminarska_Popravljena
 {
@@ -109,21 +110,24 @@ namespace OPR_Seminarska_Popravljena
                 listBox1.Items.Clear();
                 Avto avto1 = new Avto(textBox1.Text, Convert.ToInt16(textBox2.Text), Convert.ToInt16(textBox9.Text));
 
-                listBox1.Items.Add($"═══════════════════════════════════");
+                listBox1.Items.Add($"===================================");
                 listBox1.Items.Add($"  SPECIFIKACIJE AVTOMOBILA         ");
-                listBox1.Items.Add($"═══════════════════════════════════");
+                listBox1.Items.Add($"===================================");
+                listBox1.Items.Add($"Vozilo je: {OsnovniPodatki.modelVozila}");
                 listBox1.Items.Add($"Znamka: {avto1.znamka}");
-                listBox1.Items.Add($"Letnik: {2026 - avto1.starost}");
+                listBox1.Items.Add($"Letnik: {Kalkulator.Letnik(avto1.starost)}");
                 listBox1.Items.Add($"Starost avtomobila je {avto1.starost} let");
                 listBox1.Items.Add($"Cena avtomobila je: {avto1.cena} {Enote.enotaCene}");
+
+                listBox1.Items.Add($"===================================");
 
             }
             catch(Exception)
             {
                 listBox1.Items.Clear();
-                listBox1.Items.Add($"═══════════════════════════════════");
+                listBox1.Items.Add($"===================================");
                 listBox1.Items.Add("            Izpolni vse podatke!");
-                listBox1.Items.Add($"═══════════════════════════════════");
+                listBox1.Items.Add($"===================================");
             }
         }
 

@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace OPR_Seminarska_Popravljena
 {
+
     internal class OsnovniPodatki
     {
+        public static string modelVozila = "Avto";
+        
         private string _znamka;
         private int _starost;
         private int _cena;
